@@ -1,0 +1,248 @@
+---
+title: "Codebook"
+author: "Bern DySart"
+date: "2024-02-28"
+output: pdf_document
+---
+```{r setup, include = FALSE}
+library(tidyverse)
+library(haven)
+library(knitr)
+echo = FALSE
+eval = TRUE
+message = FALSE
+warning = FALSE
+load('EWM.RData')
+<<<<<<< HEAD
+cbfactor = function(.data, x){
+  x = enquo(x)
+  count(.data, !!x) |>
+    mutate(
+      values = row_number(!!x),
+      labels = as_factor(!!x),
+      freq = n,
+      perc = n / sum(n) * 100,
+      .keep = 'unused'
+    ) |>
+    knitr::kable(format = 'pipe', digits = 1L)
+}
+=======
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Project Description
+
+The greater project that this dataset is apart of a bigger project evaluating the impact of foreign influence on campaigns that support democracy. The original data sets used in this data cleaning and wrangling project were evaluating a individuals, conducted through private interviews, on their thoughts regarding all parts of life. Questions range from attitudes on women to attidutdes about the government, economy, and more. The original data sets that were used in this merger come from the World Values Survey and the European Values Survey.
+
+
+Methodology
+
+Data in the World Values Survey (WVS) dataset and European Values Survey (EVS) dataset was collected via surveys administrerd durinng interviews with respondents.
+
+The information is public opinion data that is divided by country the respondent comes from. The WVS data is from 1981-2022, covering multiple different country participants. The point of the time series WVS data is to demonstrate the change in values within a given country and society over time. Nation wide representation of adult population samples have been observed in every wave of country respondents across all the waves. 
+
+The EVS data is from 1981-2021, covering 49 European countries altogether particpants in particular. 160 surveys over five waves and 40 years is included in the data set. The survey question explore difference and similarity in value and teh changes in valye among citizens of the surveyed countries. 
+
+Both surveys ask the same questions of the respondents looking at all aspects of their life. In the pursuit of contributing the greater project of looking at foreign influence, certain variables were gathered from the two datasets for combination. The selected variables from each were matched with one another across the two and merged into one dataset for evaluation and analysis. 
+
+Citations
+
+- Inglehart, R., C. Haerpfer, A. Moreno, C. Welzel, K. Kizilova, J. Diez-Medrano, M. Lagos, P. Norris, E. Ponarin & B. Puranen (eds.). 2022. World Values Survey: All Rounds - Country-Pooled Datafile. Madrid, Spain & Vienna, Austria: JD Systems Institute & WVSA Secretariat. Dataset Version 3.0.0. doi:10.14281/18241.17
+- EVS (2022). EVS Trend File 1981-2017. GESIS, Cologne. ZA7503 Data file Version 3.0.0, https://doi.org/10.4232/1.14021.
+
+
+Variable list
+
+ 
+Variable ID: c_code
+
+- Character Variable
+- ISO Country Number code assigned to participating countries
+```{r country code, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, c_code)
+=======
+count(EWM, c_code) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: c_name
+
+- Factor Variable
+- ISO Country Number Country name equivalents
+```{r country name, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, c_name) 
+=======
+count(EWM, c_name) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: source
+
+- Character Variable
+- Identification Label for previous associated data set. ESV stands for European Values Survey and WSV stands for World Value Survey
+```{r source id, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, source)
+=======
+count(EWM, source) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: r_id
+
+- Factor Variable
+- Unified Respondent Number associated with interviewee across both datasets
+
+Variable ID: r_fulldate
+
+- Date Variable
+- Full date of interview conducted
+
+Variable ID: r_year
+
+- Numeric Variable
+- Specific interview year of participant
+<<<<<<< HEAD
+```{r year, echo = FALSE}
+cbfactor(EWM, r_year)
+```
+=======
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+
+Variable ID: r_month
+
+- NUmeric Variable
+- Specific month of interview date conducted
+<<<<<<< HEAD
+```{r month, echo = FALSE}
+cbfactor(EWM, r_month)
+```
+=======
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+
+Variable ID: r_swt
+
+- Factor Variable
+- Population weight
+
+Variable ID: r_female
+
+- Factor Variable
+- Allows for distinction between male and female respondents. Male = 1, Female = 2
+```{r sex, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, r_female)
+=======
+count(EWM, r_female) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: p_ideology
+
+- Factor Variable
+- Captures responses to survey question: Which political Party would you vote for/appeals to you, left/right scale
+```{r political ideology, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, p_ideology)
+=======
+count(EWM, p_ideology) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: p_interest
+
+- Factor Variable
+- Captures responses to survey question: How often does the individuall follow politics in the news
+```{r political interest, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, p_interest)
+=======
+count(EWM, p_interest) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: Dness
+
+- Factor Variable
+- Feeling responses to the survey statement: Democraticness in own country
+```{r democraticness, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, Dness)
+=======
+count(EWM, Dness) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: PAR
+
+- Factor Variable
+- Feeling Responses to the survey statement: Having the Army Rule
+```{r army, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, PAR)
+=======
+count(EWM, PAR) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: DPS
+
+- Factor Variable
+- Feeling Responses to the survey statement: Having a democratic political system
+```{r dem polit system, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, DPS)
+=======
+count(EWM, DPS) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: DPBB
+
+- Factor Variable
+- Feeling Responses to the survey statement: Democracy may have problems but is better
+```{r dem is better, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, DPBB)
+=======
+count(EWM, DPBB) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: p_trustA
+
+- Factor Variable
+- Feeling responses to level of trust of Americans
+```{r Americans, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, p_trustA)
+=======
+count(EWM, p_trustA) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
+
+Variable ID: p_trustR
+
+- Factor Variable
+- Feeling responses to level of trust of Russians
+```{r Russians, echo = FALSE}
+<<<<<<< HEAD
+cbfactor(EWM, p_trustR)
+=======
+count(EWM, p_trustR) |>
+  kable()
+>>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
+```
