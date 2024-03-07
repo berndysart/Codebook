@@ -13,7 +13,6 @@ eval = TRUE
 message = FALSE
 warning = FALSE
 load('EWM.RData')
-<<<<<<< HEAD
 cbfactor = function(.data, x){
   x = enquo(x)
   count(.data, !!x) |>
@@ -26,8 +25,6 @@ cbfactor = function(.data, x){
     ) |>
     knitr::kable(format = 'pipe', digits = 1L)
 }
-=======
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Project Description
@@ -59,12 +56,7 @@ Variable ID: c_code
 - Character Variable
 - ISO Country Number code assigned to participating countries
 ```{r country code, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, c_code)
-=======
-count(EWM, c_code) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: c_name
@@ -72,12 +64,7 @@ Variable ID: c_name
 - Factor Variable
 - ISO Country Number Country name equivalents
 ```{r country name, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, c_name) 
-=======
-count(EWM, c_name) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: source
@@ -85,12 +72,7 @@ Variable ID: source
 - Character Variable
 - Identification Label for previous associated data set. ESV stands for European Values Survey and WSV stands for World Value Survey
 ```{r source id, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, source)
-=======
-count(EWM, source) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: r_id
@@ -111,19 +93,15 @@ Variable ID: r_year
 ```{r year, echo = FALSE}
 cbfactor(EWM, r_year)
 ```
-=======
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 
 Variable ID: r_month
 
-- NUmeric Variable
+- Numeric Variable
 - Specific month of interview date conducted
 <<<<<<< HEAD
 ```{r month, echo = FALSE}
 cbfactor(EWM, r_month)
 ```
-=======
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 
 Variable ID: r_swt
 
@@ -135,12 +113,7 @@ Variable ID: r_female
 - Factor Variable
 - Allows for distinction between male and female respondents. Male = 1, Female = 2
 ```{r sex, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, r_female)
-=======
-count(EWM, r_female) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: p_ideology
@@ -148,12 +121,7 @@ Variable ID: p_ideology
 - Factor Variable
 - Captures responses to survey question: Which political Party would you vote for/appeals to you, left/right scale
 ```{r political ideology, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, p_ideology)
-=======
-count(EWM, p_ideology) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: p_interest
@@ -161,12 +129,7 @@ Variable ID: p_interest
 - Factor Variable
 - Captures responses to survey question: How often does the individuall follow politics in the news
 ```{r political interest, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, p_interest)
-=======
-count(EWM, p_interest) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: Dness
@@ -174,12 +137,7 @@ Variable ID: Dness
 - Factor Variable
 - Feeling responses to the survey statement: Democraticness in own country
 ```{r democraticness, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, Dness)
-=======
-count(EWM, Dness) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: PAR
@@ -187,12 +145,7 @@ Variable ID: PAR
 - Factor Variable
 - Feeling Responses to the survey statement: Having the Army Rule
 ```{r army, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, PAR)
-=======
-count(EWM, PAR) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: DPS
@@ -200,12 +153,7 @@ Variable ID: DPS
 - Factor Variable
 - Feeling Responses to the survey statement: Having a democratic political system
 ```{r dem polit system, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, DPS)
-=======
-count(EWM, DPS) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: DPBB
@@ -213,12 +161,7 @@ Variable ID: DPBB
 - Factor Variable
 - Feeling Responses to the survey statement: Democracy may have problems but is better
 ```{r dem is better, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, DPBB)
-=======
-count(EWM, DPBB) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: p_trustA
@@ -226,12 +169,7 @@ Variable ID: p_trustA
 - Factor Variable
 - Feeling responses to level of trust of Americans
 ```{r Americans, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, p_trustA)
-=======
-count(EWM, p_trustA) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
 
 Variable ID: p_trustR
@@ -239,10 +177,5 @@ Variable ID: p_trustR
 - Factor Variable
 - Feeling responses to level of trust of Russians
 ```{r Russians, echo = FALSE}
-<<<<<<< HEAD
 cbfactor(EWM, p_trustR)
-=======
-count(EWM, p_trustR) |>
-  kable()
->>>>>>> e95eebdf7d07c7df9112f3008cc72e9596aa1a28
 ```
