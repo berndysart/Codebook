@@ -1,3 +1,5 @@
+#Sample Codebook Assignment
+
 Changes made to the data set
 - First transformed variable S003 in both EVS and WVS and turned into a numeric variable
 - Created 15-17 variables from existing variables in each new data set created from WSV and ESV
